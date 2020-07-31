@@ -10,7 +10,12 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css">
+    <style>
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -19,15 +24,19 @@
         </nav>
     </div>
     <div class="jumbotron">
-        <h1 class="display-4 text-dark text-center">CDC Data 2014-2018 by State and Governor Party</h1>
+        <h1 class="display-4 text-dark text-center">CDC Data 2014-2018 by State</h1>
     </div>
-
     <div class="container-fluid">
+        <!--START RESOURCES-->
         <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">Resources</h1>
+            <div class="col-md-12 text-center bg-danger text-white">
+                <br>
+                <h1>Raw Data Resource Links</h1>
+                <br>
             </div>
         </div>
+        <!--END GOV AND PPA DATA SOURCES-->
+        <br>
         <div class="row">
             <div class="col-md-4">
                 <h3 class="text-bold">Governor Data</h3>
@@ -50,26 +59,197 @@
                      more densely populated cities, but appear lower on this list.</p>
             </div>
         </div>
+        <!--END GOV AND PPA DATA SOURCES-->
+        <!--START CDC DATA SOURCES-->
         <div class="row">
             <div class="col-md-4">
                 <h3 class="text-bold">Firearm Data</h3>
                 <a href="https://www.cdc.gov/nchs/pressroom/sosmap/firearm_mortality/firearm.htm">CDC: Firearms</a>
-                <p>Each governor was hand-recorded by individual wikipedia searches. 
-                    <br><br>Note: If a governor took office in December, I logged their first year in office as the following year.</p>
+                <p>The CDC website has a widget that visualizes the data.</p>
             </div>
             <div class="col-md-4">
                 <h3 class="text-bold">Homicide Data</h3>
                 <a href="https://www.cdc.gov/nchs/pressroom/sosmap/homicide_mortality/homicide.htm">CDC: Homicides</a>
-                <p>Each governor was hand-recorded by individual wikipedia searches. 
-                    <br><br>Note: If a governor took office in December, I logged their first year in office as the following year.</p>
+                <p>The CDC website has a widget that visualizes the data.</p> 
             </div>
             <div class="col-md-4">
                 <h3 class="text-bold">Flu/Pneumonia Data</h3>
                 <a href="https://www.cdc.gov/nchs/pressroom/sosmap/flu_pneumonia_mortality/flu_pneumonia.htm">CDC: Influenza & Pneumonia</a>
-                <p>Each governor was hand-recorded by individual wikipedia searches. 
-                    <br><br>Note: If a governor took office in December, I logged their first year in office as the following year.</p>
+                <p>The CDC website has a widget that visualizes the data.</p> 
+            </div>
+        </div>
+        <!--END CDC DATA SOURCES-->
+        <!--START INCOME/EMPLOYMENT DATA SOURCES-->
+        <!--<div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-bold">Average Income Data</h3>
+                <a href="https://apps.bea.gov/iTable/iTable.cfm?reqid=70&step=1&isuri=1&acrdn=6#reqid=70&step=1&isuri=1">BEA.gov</a>
+                <p>Annual Personal Income and Employment by State > 
+                    <br>Personal Income and Employment by Major Component (SAINC4) >
+                    <br>Areas: All States
+                    <br>Statistic: Per capita personal income
+                    <br>Unit of Measurement: Default
+                    <br>Years: 2014-2018
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-bold">Employment Data</h3>
+                <a href="https://apps.bea.gov/iTable/iTable.cfm?reqid=70&step=1&isuri=1&acrdn=6#reqid=70&step=1&isuri=1">BEA.gov</a>
+                <p>Annual Personal Income and Employment by State > 
+                    <br>Personal Income and Employment by Major Component (SAINC4) >
+                    <br>Areas: All States
+                    <br>Statistic: Total employment
+                    <br>Unit of Measurement: Default
+                    <br>Years: 2014-2018
+                </p>
+            </div>
+            <div class="col-md-2">
+                
+            </div>
+        </div>
+        <div class="row">
+            <br>
+        </div>-->
+        <!--START INCOME/EMPLOYMENT DATA SOURCES-->
+        <!--END RESOURCES-->
+    </div>
+    <div class="row">
+        <br>
+        
+    </div>
+    <!--START FILTERS-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center bg-primary text-white">
+                <br>
+                <h1>Filter Data</h1>
+                <br>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <h2 class="text-center">Data A</h2>
+                <button id="avgs-a" onclick="callAveragesA()">Get Averages</button>
+                <p id="PopAvgOutputA"></p>
+                <p id="FARateAvgOutputA"></p>
+                <p id="FADeathsAvgOutputA"></p>
+                <p id="FPRateAvgOutputA"></p>
+                <p id="FPDeathsAvgOutputA"></p>
+                <p id="HRateAvgOutputA"></p>
+                <p id="HDeathsAvgOutputA"></p><br>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <label for="saveAnotes">Notes</label><br>
+                        <textarea cols=40 rows=4 placeholder="e.g. All Republican States, All Years" id="saveAnotes"></textarea>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2 class="text-center">Data B</h2>
+                <button id="avgs-b" onclick="callAveragesB()">Get Averages</button>
+                <p id="PopAvgOutputB"></p>
+                <p id="FARateAvgOutputB"></p>
+                <p id="FADeathsAvgOutputB"></p>
+                <p id="FPRateAvgOutputB"></p>
+                <p id="FPDeathsAvgOutputB"></p>
+                <p id="HRateAvgOutputB"></p>
+                <p id="HDeathsAvgOutputB"></p><br>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <label for="saveBnotes">Notes</label><br>
+                        <textarea cols=40 rows=4 placeholder="e.g. All Wyoming" id="saveBnotes"></textarea>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2 class="text-center">Data C</h2>
+                <button id="avgs-c" onclick="callAveragesC()">Get Averages</button>
+                <p id="PopAvgOutputC"></p>
+                <p id="FARateAvgOutputC"></p>
+                <p id="FADeathsAvgOutputC"></p>
+                <p id="FPRateAvgOutputC"></p>
+                <p id="FPDeathsAvgOutputC"></p>
+                <p id="HRateAvgOutputC"></p>
+                <p id="HDeathsAvgOutputC"></p><br>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <label for="saveCnotes">Notes</label><br>
+                        <textarea cols=40 rows=4 placeholder="e.g. All 2017 Dems" id="saveCnotes"></textarea>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2 class="text-center">Data D</h2>
+                <button id="avgs-d" onclick="callAveragesD()">Get Averages</button>
+                <p id="PopAvgOutputD"></p>
+                <p id="FARateAvgOutputD"></p>
+                <p id="FADeathsAvgOutputD"></p>
+                <p id="FPRateAvgOutputD"></p>
+                <p id="FPDeathsAvgOutputD"></p>
+                <p id="HRateAvgOutputD"></p>
+                <p id="HDeathsAvgOutputD"></p><br>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <label for="saveDnotes">Notes</label><br>
+                        <textarea cols=40 rows=4 placeholder="e.g. Texas 2015" id="saveDnotes"></textarea>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-3">
+                <form class="bg-dark text-white">
+                    <h3 class="text-center">Filter Search</h3>
+                    <ul class="list-group bg-dark">
+                        <li class="list-group-item bg-dark">
+                            <label for="states">Two-Letter State Code</label><br>
+                            <input type="text" placeholder="Must be capitalized" id="states" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="years">Year</label><br>
+                            <input type="text" placeholder="2014-2018" id="years" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="govs">Gov Party</label><br>
+                            <input type="text" placeholder="R, D, I" id="govs" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <button id="filter-btn" onclick="handleFilters()" type="button" class="btn btn-dark">Filter Table</button>
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <button id="refresh-btn" onclick="buildTable(stateData)" type="button" class="btn btn-dark">Refresh Table</button>
+                        </li>
+                    </ul>
+                    <!--END FILTERS-->
+                </form>
+            </div>
+            <div class="col-md-9">
+                <table id="state-data" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">State</th>
+                            <th onclick="sortTable(1)">Year</th>
+                            <th onclick="sortTable(2)">Governor</th>
+                            <th onclick="sortTable(3)">Pop.</th>
+                            <th onclick="sortTable(4)">Firearm Rate</th>
+                            <th onclick="sortTable(5)">Firearm Deaths</th>
+                            <th onclick="sortTable(6)">Flu/Pneumonia Rate</th>
+                            <th onclick="sortTable(7)">Flu/Pneumonia Deaths</th>
+                            <th onclick="sortTable(8)">Homicide Rate</th>
+                            <th onclick="sortTable(9)">Homicide Deaths</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="data.js"></script>
+    <script src="maps.js"></script>
 </body>
 </html>

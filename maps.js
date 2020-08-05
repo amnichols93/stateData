@@ -96,548 +96,121 @@ function sortTable(n) {
     }
 }
 
-function popAvgA() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("PopAvgOutputA");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[3];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Population per Area: " + avg);
-};
-
-function farateAvgA() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FARateAvgOutputA");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[4];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Firearms Rate: " + avg);
-};
-
-function fadeathsAvgA() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FADeathsAvgOutputA");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[5];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Firearms Deaths: " + avg);
-};
-
-function fprateAvgA() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FPRateAvgOutputA");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[6];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Flu/Pneumonia Rate: " + avg);
-};
-
-function fpdeathsAvgA() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FPDeathsAvgOutputA");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[7];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Flu/Pneumonia Deaths: " + avg);
-};
-
-function hrateAvgA() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("HRateAvgOutputA");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[8];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Homicide Rate: " + avg);
-};
-
-function hdeathsAvgA() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("HDeathsAvgOutputA");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[9];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Homicide Deaths: " + avg);
-}
-
-function popAvgB() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("PopAvgOutputB");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[3];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Population per Area: " + avg);
-};
-
-function farateAvgB() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FARateAvgOutputB");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[4];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Firearms Rate: " + avg);
-};
-
-function fadeathsAvgB() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FADeathsAvgOutputB");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[5];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Firearms Deaths: " + avg);
-};
-
-function fprateAvgB() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FPRateAvgOutputB");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[6];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Flu/Pneumonia Rate: " + avg);
-};
-
-function fpdeathsAvgB() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FPDeathsAvgOutputB");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[7];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Flu/Pneumonia Deaths: " + avg);
-};
-
-function hrateAvgB() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("HRateAvgOutputB");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[8];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Homicide Rate: " + avg);
-};
-
-function hdeathsAvgB() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("HDeathsAvgOutputB");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[9];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Homicide Deaths: " + avg);
-}
-
-function popAvgC() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("PopAvgOutputC");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[3];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Population per Area: " + avg);
-};
-
-function farateAvgC() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FARateAvgOutputC");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[4];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Firearms Rate: " + avg);
-};
-
-function fadeathsAvgC() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FADeathsAvgOutputC");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[5];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Firearms Deaths: " + avg);
-};
-
-function fprateAvgC() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FPRateAvgOutputC");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[6];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Flu/Pneumonia Rate: " + avg);
-};
-
-function fpdeathsAvgC() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FPDeathsAvgOutputC");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[7];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Flu/Pneumonia Deaths: " + avg);
-};
-
-function hrateAvgC() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("HRateAvgOutputC");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[8];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Homicide Rate: " + avg);
-};
-
-function hdeathsAvgC() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("HDeathsAvgOutputC");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[9];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Homicide Deaths: " + avg);
-}
-
-function popAvgD() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("PopAvgOutputD");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[3];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Population per Area: " + avg);
-};
-
-function farateAvgD() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FARateAvgOutputD");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[4];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Firearms Rate: " + avg);
-};
-
-function fadeathsAvgD() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FADeathsAvgOutputD");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[5];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Firearms Deaths: " + avg);
-};
-
-function fprateAvgD() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FPRateAvgOutputD");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[6];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Flu/Pneumonia Rate: " + avg);
-};
-
-function fpdeathsAvgD() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("FPDeathsAvgOutputD");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[7];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Flu/Pneumonia Deaths: " + avg);
-};
-
-function hrateAvgD() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("HRateAvgOutputD");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[8];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Homicide Rate: " + avg);
-};
-
-function hdeathsAvgD() {
-    var table, x, i, rows, avg, rowcount, output = 0;
-    table = document.getElementById("state-data");
-    output = document.getElementById("HDeathsAvgOutputD");
-    rows = table.rows;
-    let total = 0;
-    for (i = 1; i < (rows.length); i++) {
-        x = rows[i].getElementsByTagName("td")[9];
-        x = Number(x.innerHTML);
-        total = total + x;
-        rowcount = i;
-    }
-    avg = total / rowcount;
-    avg = avg.toFixed(3);
-    output.innerHTML = "";
-    output.append("Homicide Deaths: " + avg);
-}
-
 function callAveragesA() {
-    popAvgA();
-    farateAvgA();
-    fadeathsAvgA();
-    fprateAvgA(); 
-    fpdeathsAvgA(); 
-    hrateAvgA(); 
-    hdeathsAvgA();
+    function AveragesA(elementid, columnindex, precedingtext) {
+        var table, x, i, rows, avg, rowcount, output = 0;
+        table = document.getElementById("state-data");
+        output = document.getElementById(elementid);
+        rows = table.rows;
+        let total = 0;
+        for (i = 1; i < (rows.length); i++) {
+            x = rows[i].getElementsByTagName("td")[columnindex];
+            x = Number(x.innerHTML);
+            total = total + x;
+            rowcount = i;
+        }
+        avg = total / rowcount;
+        avg = avg.toFixed(3);
+        output.innerHTML = "";
+        output.append(precedingtext + avg);
+    }
+
+    AveragesA("PopAvgOutputA", 3, "Population per Area: ");
+    AveragesA("FARateAvgOutputA", 4, "Firearms Rate: ");
+    AveragesA("FADeathsAvgOutputA", 5, "Firearms Deaths: ");
+    AveragesA("FPRateAvgOutputA", 6, "Flu/Pneumonia Rate: ");
+    AveragesA("FPDeathsAvgOutputA", 7, "Flu/Pneumonia Deaths: ");
+    AveragesA("HRateAvgOutputA", 8, "Homicide Rate: ");
+    AveragesA("HDeathsAvgOutputA", 9, "Homicide Deaths: ");
 }
 
 function callAveragesB() {
-    popAvgB();
-    farateAvgB();
-    fadeathsAvgB();
-    fprateAvgB(); 
-    fpdeathsAvgB(); 
-    hrateAvgB(); 
-    hdeathsAvgB();
+    function AveragesB(elementid, columnindex, precedingtext) {
+        var table, x, i, rows, avg, rowcount, output = 0;
+        table = document.getElementById("state-data");
+        output = document.getElementById(elementid);
+        rows = table.rows;
+        let total = 0;
+        for (i = 1; i < (rows.length); i++) {
+            x = rows[i].getElementsByTagName("td")[columnindex];
+            x = Number(x.innerHTML);
+            total = total + x;
+            rowcount = i;
+        }
+        avg = total / rowcount;
+        avg = avg.toFixed(3);
+        output.innerHTML = "";
+        output.append(precedingtext + avg);
+    }
+
+    AveragesB("PopAvgOutputB", 3, "Population per Area: ");
+    AveragesB("FARateAvgOutputB", 4, "Firearms Rate: ");
+    AveragesB("FADeathsAvgOutputB", 5, "Firearms Deaths: ");
+    AveragesB("FPRateAvgOutputB", 6, "Flu/Pneumonia Rate: ");
+    AveragesB("FPDeathsAvgOutputB", 7, "Flu/Pneumonia Deaths: ");
+    AveragesB("HRateAvgOutputB", 8, "Homicide Rate: ");
+    AveragesB("HDeathsAvgOutputB", 9, "Homicide Deaths: ");
 }
 
 function callAveragesC() {
-    popAvgC();
-    farateAvgC();
-    fadeathsAvgC();
-    fprateAvgC(); 
-    fpdeathsAvgC(); 
-    hrateAvgC(); 
-    hdeathsAvgC();
+    function AveragesC(elementid, columnindex, precedingtext) {
+        var table, x, i, rows, avg, rowcount, output = 0;
+        table = document.getElementById("state-data");
+        output = document.getElementById(elementid);
+        rows = table.rows;
+        let total = 0;
+        for (i = 1; i < (rows.length); i++) {
+            x = rows[i].getElementsByTagName("td")[columnindex];
+            x = Number(x.innerHTML);
+            total = total + x;
+            rowcount = i;
+        }
+        avg = total / rowcount;
+        avg = avg.toFixed(3);
+        output.innerHTML = "";
+        output.append(precedingtext + avg);
+    }
+
+    AveragesC("PopAvgOutputC", 3, "Population per Area: ");
+    AveragesC("FARateAvgOutputC", 4, "Firearms Rate: ");
+    AveragesC("FADeathsAvgOutputC", 5, "Firearms Deaths: ");
+    AveragesC("FPRateAvgOutputC", 6, "Flu/Pneumonia Rate: ");
+    AveragesC("FPDeathsAvgOutputC", 7, "Flu/Pneumonia Deaths: ");
+    AveragesC("HRateAvgOutputC", 8, "Homicide Rate: ");
+    AveragesC("HDeathsAvgOutputC", 9, "Homicide Deaths: ");
 }
 
 function callAveragesD() {
-    popAvgD();
-    farateAvgD();
-    fadeathsAvgD();
-    fprateAvgD(); 
-    fpdeathsAvgD(); 
-    hrateAvgD(); 
-    hdeathsAvgD();
+    function AveragesD(elementid, columnindex, precedingtext) {
+        var table, x, i, rows, avg, rowcount, output = 0;
+        table = document.getElementById("state-data");
+        output = document.getElementById(elementid);
+        rows = table.rows;
+        let total = 0;
+        for (i = 1; i < (rows.length); i++) {
+            x = rows[i].getElementsByTagName("td")[columnindex];
+            x = Number(x.innerHTML);
+            total = total + x;
+            rowcount = i;
+        }
+        avg = total / rowcount;
+        avg = avg.toFixed(3);
+        output.innerHTML = "";
+        output.append(precedingtext + avg);
+    }
+
+    AveragesD("PopAvgOutputD", 3, "Population per Area: ");
+    AveragesD("FARateAvgOutputD", 4, "Firearms Rate: ");
+    AveragesD("FADeathsAvgOutputD", 5, "Firearms Deaths: ");
+    AveragesD("FPRateAvgOutputD", 6, "Flu/Pneumonia Rate: ");
+    AveragesD("FPDeathsAvgOutputD", 7, "Flu/Pneumonia Deaths: ");
+    AveragesD("HRateAvgOutputD", 8, "Homicide Rate: ");
+    AveragesD("HDeathsAvgOutputD", 9, "Homicide Deaths: ");
+}
+
+function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
 }
 
 // Build the table when the page loads
